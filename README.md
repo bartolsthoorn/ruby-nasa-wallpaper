@@ -7,6 +7,7 @@ Install it like so:
 cd ~/Pictures
 git clone https://github.com/bartolsthoorn/ruby-nasa-wallpaper.git
 mv ruby-nasa-wallpaper/nasa-fetch.rb nasa-fetch.rb
+mv ruby-nasa-wallpaper/nasa-set.sh nasa-set.sh
 nano nasa-fetch.rb
 # Change @user = 'bart' to your username
 ruby nasa-fetch.rb
