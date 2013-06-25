@@ -15,6 +15,6 @@ url = "http://www.nasa.gov/images/content/#{image}"
 
 File.open("/Users/#@user/Pictures/nasa-wallpaper.jpg", 'w+') { |file| file.write(open(url)) }
 
-`defaults write com.apple.desktop Background '{default = {ImageFilePath = "/Users/#@user/Pictures/nasa-wallpaper.jpg"; };}'`
+`./nasa-set.sh /Users/#@user/Pictures/nasa-wallpaper.jpg`
 
-puts 'NASA Wallpaper of the day successfully landed, relogin for effect'
+puts 'NASA Wallpaper of the day successfully landed'
