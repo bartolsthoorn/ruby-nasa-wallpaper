@@ -1,4 +1,4 @@
-# NASA Image Of The Day
+# NASA Image Of The Day Wallpaper
 Quick hack in Ruby for Mac OS X! It sets the [NASA image of the day](http://www.nasa.gov/multimedia/imagegallery/iotd.html) as the wallpaper.
 
 Install it like so:
