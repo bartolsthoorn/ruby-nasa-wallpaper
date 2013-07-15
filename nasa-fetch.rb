@@ -11,9 +11,9 @@ end
 @timestamp = Time.now.to_i.to_s
 
 # Dirty, but hey, it's a hack, just plain Ruby, yeah!
-rss = open('http://www.nasa.gov/rss/lg_image_of_the_day.rss')
-image = rss.split('<url>http://www.nasa.gov/images/content/')[1].split('</url>')[0]
-url = "http://www.nasa.gov/images/content/#{image}"
+rss = open('http://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss')
+image = rss.split('url="http://www.nasa.gov/sites/default/files/')[1].split('"')[0]
+url = "http://www.nasa.gov/sites/default/files/#{image}"
 
 File.open("/Users/#@user/Pictures/nasa-wallpaper-#@timestamp.jpg", 'w+') { |file| file.write(open(url)) }
 
