@@ -15,7 +15,7 @@ rss = open('http://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss')
 image = rss.split('url="http://www.nasa.gov/sites/default/files/')[1].split('"')[0]
 url = "http://www.nasa.gov/sites/default/files/#{image}"
 
-File.open("/Users/#@user/Pictures/nasa-wallpaper-#@timestamp.jpg", 'w+') { |file| file.write(open(url)) }
+`curl #{url} > /Users/#@user/Pictures/nasa-wallpaper-#@timestamp.jpg`
 
 `./nasa-set.sh /Users/#@user/Pictures/nasa-wallpaper-#@timestamp.jpg`
 
